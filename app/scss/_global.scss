@@ -1,0 +1,130 @@
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+a {
+  display: inline-block;
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 30px;
+}
+html {
+  min-height: 100vh;
+}
+body {
+  // min-width: 320px;
+  // min-width: 900px;
+  overflow-x: hidden;
+  // min-height: 40000px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000000;
+  min-height: 100vh;
+}
+
+.title-1 {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 110%;
+}
+.title-2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+}
+.title-3 {
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.default-button-green {
+  padding: 22px 15px;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-green;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  transition: $animate;
+  &:hover {
+    transition: $animate;
+    background-color: $green;
+  }
+}
+.default-button-white {
+  padding: 22px 50px;
+  background-color: #fff;
+  border: 1px solid $light-green;
+  
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $light-green;
+  transition: $animate;
+  
+  &:hover {
+    transition: $animate;
+    background-color: $green;
+    color: #fff;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main {
+  flex: 1 1 auto;
+}
+
+.overlay {
+  z-index: $zidx-3;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(#000, .0);
+  transition: $animate;
+  &.open {
+    transition: $animate;
+    bottom: -100px;
+    background-color: rgba(#000, .8);
+  }
+}
+	
+/*
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+} */

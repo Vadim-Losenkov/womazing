@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- device-width, initial-scale=1.0 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>womazing</title>
+  <link rel="stylesheet" href="css/style.min.css" type="text/css" media="all" />
+  
+  <!-- шрифты -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- шрифты -->
+  
+  <script src="//cdn.jsdelivr.net/npm/eruda"></script>
+  <script>eruda.init();</script>
+  
+</head>
+<body>
+  
+  <header id="header" class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo">
+          <img src="images/global/logo.svg" alt="">
+        </a>
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="index.html" class="header__menu-link active">Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="shop.html" class="header__menu-link">Магазин</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="about.html" class="header__menu-link">О бренде</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="contacts.html" class="header__menu-link">Контакты</a>
+          </li>
+        </ul>
+        <div class="header__contact">
+          <a href="#header-phone-popup" data-effect="mfp-zoom-in" class="header__contact-phone open-popup">
+            <div class="header__contact-icon">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.7483 2.43512L11.8551 0.548462L7.9234 4.47365L9.44761 6.04779C9.19217 6.50124 8.63793 7.36988 7.69337 8.31445C6.74868 9.25916 5.87369 9.81969 5.4159 10.0792L3.87264 8.55561L0.00228882 12.4029L1.88513 14.2983C2.60489 15.0181 3.70001 15.2046 4.61023 14.7625C5.99924 14.0879 8.0955 12.8431 10.1943 10.7443C12.2931 8.64551 13.5379 6.54922 14.2125 5.16021C14.3724 4.83107 14.45 4.47786 14.45 4.1269C14.45 3.50718 14.2078 2.89463 13.7483 2.43512ZM13.1978 4.66731C12.561 5.97844 11.3846 7.95864 9.39664 9.94657C7.40871 11.9345 5.42852 13.1109 4.11738 13.7477C3.63938 13.9799 3.0629 13.8806 2.68423 13.5019L1.59749 12.4079L3.87546 10.1436L5.19018 11.4415L5.54193 11.2849C5.59908 11.2595 6.9595 10.6438 8.49119 9.11213C10.0239 7.57946 10.6267 6.23053 10.6516 6.17385L10.8041 5.82682L9.5068 4.48703L11.8559 2.14177L12.9512 3.23325C13.3307 3.61328 13.4298 4.18951 13.1978 4.66731Z" fill="#6E9C9F"/>
+              </svg>
+            </div>
+            +7 (495) 823-54-12
+          </a>
+          <a href="#" class="header__contact-cart">
+            <span>3</span>
+            <img src="images/icons/cart.svg" alt="">
+          </a>
+        </div>
+        
+        <div class="header-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="header-mobile">
+    <div class="header-mobile__inner">
+      <div class="header-mobile__links">
+        <a href="index.html" class="header-mobile__link">Главная</a>
+        <a href="shop.html" class="header-mobile__link">Магазин</a>
+        <a href="about.html" class="header-mobile__link">О бренде</a>
+        <a href="contacts.html" class="header-mobile__link">Контакты</a>
+      </div>
+      <div class="header__contact">
+        <a href="#header-phone-popup" data-effect="mfp-zoom-in" class="header__contact-phone open-popup">
+          <div class="header__contact-icon">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.7483 2.43512L11.8551 0.548462L7.9234 4.47365L9.44761 6.04779C9.19217 6.50124 8.63793 7.36988 7.69337 8.31445C6.74868 9.25916 5.87369 9.81969 5.4159 10.0792L3.87264 8.55561L0.00228882 12.4029L1.88513 14.2983C2.60489 15.0181 3.70001 15.2046 4.61023 14.7625C5.99924 14.0879 8.0955 12.8431 10.1943 10.7443C12.2931 8.64551 13.5379 6.54922 14.2125 5.16021C14.3724 4.83107 14.45 4.47786 14.45 4.1269C14.45 3.50718 14.2078 2.89463 13.7483 2.43512ZM13.1978 4.66731C12.561 5.97844 11.3846 7.95864 9.39664 9.94657C7.40871 11.9345 5.42852 13.1109 4.11738 13.7477C3.63938 13.9799 3.0629 13.8806 2.68423 13.5019L1.59749 12.4079L3.87546 10.1436L5.19018 11.4415L5.54193 11.2849C5.59908 11.2595 6.9595 10.6438 8.49119 9.11213C10.0239 7.57946 10.6267 6.23053 10.6516 6.17385L10.8041 5.82682L9.5068 4.48703L11.8559 2.14177L12.9512 3.23325C13.3307 3.61328 13.4298 4.18951 13.1978 4.66731Z" fill="#6E9C9F"/>
+            </svg>
+          </div>
+          +7 (495) 823-54-12
+        </a>
+        <a href="#" class="header__contact-cart">
+          <span>3</span>
+          <img src="images/icons/cart.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="wrapper">
+    <main class="main">
+      
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__box">
+            <div class="footer__copy">
+              <div class="footer__logo">
+                <img src="images/global/logo.svg" alt="">
+              </div>
+              <div class="footer__copy-links">
+                <p class="footer__copy-link">
+                  © Все права защищены
+                </p>
+                <a href="#" class="footer__copy-link">
+                  Политика конфиденциальности
+                </a>
+                <a href="#" class="footer__copy-link">
+                  Публичная оферта
+                </a>
+              </div>
+            </div>
+            <div class="footer__links">
+              <div class="footer__column">
+                <div class="footer__column-head">
+                  <a href="#" class="footer__column-link active">
+                    Главная
+                  </a>
+                </div>
+              </div>
+              <div class="footer__column">
+                <div class="footer__column-head">
+                  <a href="#" class="footer__column-link">
+                    Магазин
+                  </a>
+                </div>
+                <ul class="footer__column-body">
+                  <li class="footer__column-item">
+                    <a href="#" class="footer__column-link">
+                      Пальто
+                    </a>
+                  </li>
+                  <li class="footer__column-item">
+                    <a href="#" class="footer__column-link">
+                      Свитшоты
+                    </a>
+                  </li>
+                  <li class="footer__column-item">
+                    <a href="#" class="footer__column-link">
+                      Кардиганы
+                    </a>
+                  </li>
+                  <li class="footer__column-item">
+                    <a href="#" class="footer__column-link">
+                      Толстовки
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__column">
+                <div class="footer__column-head">
+                  <a href="#" class="footer__column-link">
+                    О бренде
+                  </a>
+                </div>
+              </div>
+              <div class="footer__column">
+                <div class="footer__column-head">
+                  <a href="#" class="footer__column-link">
+                    Контакты
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <a href="tel:74958235412" class="footer__contacts-phone">+7 (495) 823-54-12</a>
+            <a href="mailto:hello@womazing.com" class="footer__contacts-mail">hello@womazing.com</a>
+            <div class="footer__contacts-social">
+              <a href="instagram.com" class="footer__contacts-link">
+                <img src="images/icons/instagram.svg" alt="">
+              </a>
+              <a href="facebook.com" class="footer__contacts-link">
+                <img src="images/icons/facebook.svg" alt="">
+              </a>
+              <a href="twitter.com" class="footer__contacts-link">
+                <img src="images/icons/twitter.svg" alt="">
+              </a>
+            </div>
+            <img src="images/icons/pay.png" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <div class="popups">
+    <div id="header-phone-popup" class="call-popup mfp-with-anim mfp-hide">
+      <h3 class="call-popup__title title-3">Заказать обратный звонок</h3>
+      <input class="call-popup__input" type="text" placeholder="Имя" />
+      <input class="call-popup__input" type="email" placeholder="E-mail" />
+      <input class="call-popup__input" type="number" placeholder="Телефон" />
+      <a href="#response-popup" class="call-popup__button default-button-green open-popup">
+        Заказать звонок
+      </a>
+    </div>
+    <div id="response-popup" class="call-popup mfp-with-anim mfp-hide">
+      <h3 class="call-popup__title title-3">Отлично! Мы скоро вам перезвоним.</h3>
+      <a href="#" class="call-popup__button default-button-white" data-popup="close">
+        Закрыть
+      </a>
+    </div>
+  </div>
+  
+  <div class="overlay"></div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -15,11 +15,15 @@ $(function() {
       $('.header__contact-cart span').removeClass('cart-items-counter')
     }
     
-    $('.header-burger, .overlay, .header__contact-phone').on('click', function() {
-      $('.header-burger').toggleClass('open')
-      $('.overlay').toggleClass('open')
-      $('.header-mobile').toggleClass('open')
-      $('#header').toggleClass('scroll')
+    $(window).on('resize', (e) => {
+      if ($(window).outerWidth() <= 900) {
+        $('.header-burger, .overlay, .header__contact-phone').on('click', function() {
+          $('.header-burger').toggleClass('open')
+          $('.overlay').toggleClass('open')
+          $('.header-mobile').toggleClass('open')
+          $('#header').toggleClass('scroll')
+        })
+      }
     })
     
     $('.open-popup').magnificPopup({
@@ -49,4 +53,6 @@ $(function() {
       clickable: true,
     },
   })
+
+  var mixer = mixitup('.shop__inner');
 })

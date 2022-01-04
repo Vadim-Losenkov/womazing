@@ -25,7 +25,7 @@ body {
   // min-width: 900px;
   overflow-x: hidden;
   // min-height: 40000px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
@@ -49,6 +49,11 @@ body {
   font-weight: 500;
   font-size: 25px;
 }
+.title-4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+}
 
 .default-button-green {
   padding: 22px 15px;
@@ -63,7 +68,7 @@ body {
   line-height: 140%;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #FFFFFF;
+  color: #ffffff;
   transition: $animate;
   &:hover {
     transition: $animate;
@@ -74,7 +79,7 @@ body {
   padding: 22px 50px;
   background-color: #fff;
   border: 1px solid $light-green;
-  
+
   font-weight: normal;
   font-size: 17px;
   line-height: 140%;
@@ -82,7 +87,7 @@ body {
   letter-spacing: 0.02em;
   color: $light-green;
   transition: $animate;
-  
+
   &:hover {
     transition: $animate;
     background-color: $green;
@@ -105,15 +110,46 @@ body {
   top: 0;
   right: 0;
   left: 0;
-  background-color: rgba(#000, .0);
+  background-color: rgba(#000, 0);
   transition: $animate;
   &.open {
     transition: $animate;
     bottom: -100px;
-    background-color: rgba(#000, .8);
+    background-color: rgba(#000, 0.8);
   }
 }
-	
+
+.page-head {
+  margin-top: 270px;
+  margin-bottom: 214px;
+  &__title {
+    margin-bottom: 26px;
+  }
+}
+.breadcrumbs {
+  &__item {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    color: #919191;
+    position: relative;
+    display: inline-block;
+    padding-right: 13px;
+  }
+  &__item-link {
+    color: #000;
+  }
+  &__item + .breadcrumbs__item {
+    padding-left: 30px;
+    &::before {
+      position: absolute;
+      left: 0;
+      color: #000;
+      content: "—";
+    }
+  }
+}
+
 /*
 .wrapper {
   display: flex;

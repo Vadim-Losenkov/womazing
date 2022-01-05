@@ -160,6 +160,9 @@
   }
 }
 @media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
   .title-1 {
     font-size: 38px;
   }
@@ -197,6 +200,25 @@
   }
   .benefits__item {
     max-width: 100%;
+  }
+
+  .about__item {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+  .about__info-title {
+    margin-bottom: 20px;
+  }
+  .about__info {
+    max-width: 100%;
+  }
+  .about__item.left .about__info {
+    order: -1;
+  }
+  .about__item.left .about__image,
+  .about__item.right .about__image {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 @media (max-width: 500px) {

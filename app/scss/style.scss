@@ -12,9 +12,8 @@
   right: 0;
   left: 0;
   transition: $animate;
-  z-index: 1;
+  z-index: $zidx-1;
   &.scroll {
-    z-index: $zidx-1;
     background-color: #fff;
     transition: $animate;
     box-shadow: 0 4px 15px rgba(#000, 0.05);
@@ -108,6 +107,7 @@
     }
   }
 }
+
 .header-burger {
   display: none;
 
@@ -177,6 +177,7 @@
 // home-page
 .top {
   padding-top: $header-indent;
+  margin-bottom: 185px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -244,17 +245,108 @@
     }
   }
 }
+
+.collection {
+  margin-bottom: 130px;
+  &__title {
+    margin-bottom: 90px;
+    width: 100%;
+    text-align: left;
+  }
+  &__items {
+    display: flex;
+    column-gap: 30px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.benefits {
+  &__title {
+    margin-bottom: 80px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 305px;
+    padding: 0 8px;
+  }
+  &__item-image {
+    width: 61px;
+    height: 61px;
+    margin-bottom: 38px;
+  }
+  &__item-title {
+    margin-bottom: 24px;
+  }
+  &__item-text {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+}
+
+.team {
+  margin: 130px 0;
+  &__title {
+    margin-bottom: 90px;
+  }
+  &__slider-wrapper {
+    position: relative;
+    padding: 0 45px;
+    margin-left: -45px;
+  }
+  &__slider {
+    max-width: 730px;
+    margin: 0;
+    margin-right: 15px;
+  }
+  &__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: transparent;
+    &.swiper-button-next {
+      right: -10px;
+    }
+    &.swiper-button-prev {
+      left: -10px;
+      transform: rotate(180deg);
+    }
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    max-width: 255px;
+  }
+  &__info-title,
+  &__info-text {
+    margin-bottom: 28px;
+  }
+}
 // end home-page
 
 // shop-page
 .shop {
   &__filter {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 10px;
     margin-bottom: 92px;
   }
   &__filter-item {
     cursor: pointer;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 17px;
     color: #000;
@@ -368,6 +460,108 @@
 }
 // end shop-page
 
+// item-page
+.product {
+  margin-bottom: 130px;
+  
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__info {
+    max-width: 347px;
+    margin-left: 70px;
+  }
+  &__info-price {
+    margin-bottom: 60px;
+  }
+  &__info-priceItem {
+    margin-right: 30px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110%;
+    color: #998E78;
+  }
+  &__info-priceOld {
+    font-size: 30px;
+    line-height: 110%;
+    letter-spacing: 0.02em;
+    text-decoration: line-through;
+    color: #9C9C9C;
+  }
+  
+  &__info-sizeTitle,
+  &__info-colorTitle {
+    display: block;
+    margin-bottom: 34px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+  }
+  
+  &__info-sizeFilter,
+  &__info-colorFilter{
+    display: flex;
+    column-gap: 14px;
+  }
+  &__info-sizeItem {
+    width: 41px;
+    height: 41px;
+    background-color: #fff;
+    border: 1px solid  #000;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.active {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+  
+  &__info-colorItem {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    border: 1px solid  transparent;
+    &.active {
+      border: 1px solid  #000;
+    }
+  }
+  
+  &__info-size,
+  &__info-color {
+    margin-bottom: 60px;
+  }
+  
+  &__info-button {
+    display: flex;
+  }
+  &__info-buttonLink {
+    width: 268px;
+  }
+  &__info-buttonCounter {
+    border: 1px solid  #AFAFAF;
+    padding: 20px 30px;
+    font-size: 20px;
+    color: #000;
+    margin-right: 10px;
+  }
+}
+.product-more {
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+}
+// end item-page
 .footer {
   background-color: $bg-orange;
   padding: 100px 0;

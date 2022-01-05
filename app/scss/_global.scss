@@ -22,7 +22,7 @@ html {
 }
 body {
   // min-width: 320px;
-  // min-width: 900px;
+  // min-width: 1600px;
   overflow-x: hidden;
   // min-height: 40000px;
   font-family: "Raleway", sans-serif;
@@ -120,8 +120,10 @@ body {
 }
 
 .page-head {
-  margin-top: 270px;
-  margin-bottom: 214px;
+  // margin-top: 270px;
+  // margin-bottom: 214px;
+  margin-top: 190px;
+  margin-bottom: 102px;
   &__title {
     margin-bottom: 26px;
   }
@@ -147,6 +149,20 @@ body {
       color: #000;
       content: "—";
     }
+  }
+}
+
+.default-link {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 140%;
+  color: $light-green;
+  transition: $animate;
+  padding-bottom: 5px;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    color: $green;
+    border-bottom: 1px solid  #CEDEDF;
   }
 }
 

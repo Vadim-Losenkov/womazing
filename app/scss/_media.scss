@@ -193,6 +193,18 @@
   .shop__filter {
     margin-bottom: 40px;
   }
+  
+  .success {
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info {
+      max-width: 100%;
+      padding-right: 0;
+      margin-bottom: 40px;
+    }
+  }
 }
 @media (max-width: 700px) {
   .benefits__items {
@@ -219,6 +231,34 @@
   .about__item.right .about__image {
     margin-right: 0;
     margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .checkout__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .checkout__data {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  .checkout__info-table {
+    margin-bottom: 50px;
+  }
+  .checkout__info,
+  .checkout__info-table,
+  .checkout__info-pay {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .checkout__info {
+    margin-bottom: 100px;
+  }
+  .default-input {
+    &::placeholder {
+      font-size: 14px;
+    }
   }
 }
 @media (max-width: 500px) {
@@ -280,5 +320,19 @@
     font-size: 14px;
     margin: 0;
     margin-left: auto;
+  }
+  .success {
+    &__info {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info-image {
+      margin-right: 0px;
+      margin-bottom: 25px;
+    }
+    &__link {
+      font-size: 14px;
+      padding: 15px 35px;
+    }
   }
 }

@@ -107,7 +107,6 @@
     }
   }
 }
-
 .header-burger {
   display: none;
 
@@ -647,6 +646,112 @@
   }
 }
 // end about-page
+
+// checkout-page
+.checkout {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__data {
+    max-width: 370px;
+    padding-right: 40px;
+  }
+  &__data-title {
+    margin-bottom: 45px;
+  }
+  &__data-item {
+    margin-bottom: 50px;
+  }
+  &__data-textarea {
+    height: 130px;
+  }
+  
+  &__info-table {
+    margin-bottom: 160px;
+    max-width: 255px;
+  }
+  &__info-pay {
+    max-width: 245px;
+  }
+  &__info-payLink {
+    width: 245px;
+  }
+  &__info-title,
+  &__info-payTitle {
+    margin-bottom: 45px;
+  }
+  &__info-tableHead,
+  &__info-tableItem {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__info-payCheckbox {
+    margin-bottom: 45px;
+    position: relative;
+    padding-left: 38px;
+    .custom-checkbox {
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-color: #fff;
+      border: 1px solid  #000;
+      top: 50%;
+      transform: translateY(-50%);
+      &.active::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  
+  &__info-tableItem.total {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      bottom: -15px;
+      left: -15px;
+      right: -15px;
+      background-color: $bg-orange;
+      z-index: -1;
+    }
+  }
+}
+// end checkout-page
+
+// success-page
+.success {
+  margin-bottom: 140px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    max-width: 510px;
+    padding-right: 20px;
+  }
+  &__info-image {
+    margin-right: 44px;
+  }
+  &__info-title {
+    margin-bottom: 17px;
+  }
+}
+// end success-page
 
 .footer {
   background-color: $bg-orange;

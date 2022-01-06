@@ -165,3 +165,25 @@ body {
     border-bottom: 1px solid  #CEDEDF;
   }
 }
+
+.default-input {
+  margin-bottom: 35px;
+  padding-bottom: 16px;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  background-color: transparent;
+  border-radius: 0px;
+  border-bottom: 1px solid  #000;
+  resize: none;
+  
+  &::placeholder {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #868686;
+  }
+}

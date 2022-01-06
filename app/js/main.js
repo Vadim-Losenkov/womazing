@@ -41,6 +41,11 @@ $(function() {
     });
   })
   
+  $('[data-checkbox="wrapper"]').on('click', function() {
+    $(this).toggleClass('active')
+    $(this).children('.custom-checkbox').toggleClass('active')
+  })
+  
   new Swiper('.top__slider', {
     spaceBetween: 30,
     autoplay: {

@@ -120,10 +120,12 @@ body {
 }
 
 .page-head {
-  // margin-top: 270px;
-  // margin-bottom: 214px;
-  margin-top: 190px;
-  margin-bottom: 102px;
+  margin-top: 270px;
+  margin-bottom: 214px;
+  &.shop-page-head {
+    margin-top: 190px;
+    margin-bottom: 102px;
+  }
   &__title {
     margin-bottom: 26px;
   }

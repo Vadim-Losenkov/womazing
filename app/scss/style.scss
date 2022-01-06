@@ -232,15 +232,18 @@
   }
   &__images {
     position: relative;
+    padding-right: 90px;
+    padding-left: 90px;
+    padding-bottom: 60px;
     .image-2 {
       position: absolute;
-      bottom: -60px;
-      left: -90px;
+      bottom: 0;
+      left: 0;
     }
     .image-3 {
       position: absolute;
       top: 120px;
-      right: -90px;
+      right: 0;
     }
   }
   .top__slider-pagination {
@@ -313,6 +316,7 @@
 
 .team {
   margin: 130px 0;
+  overflow-x: hidden;
   &__title {
     margin-bottom: 90px;
   }
@@ -561,6 +565,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    
     &.active {
       color: #fff;
       background-color: #000;
@@ -753,6 +758,43 @@
 }
 // end success-page
 
+// contacts-page
+.contacts {
+  &__map {
+    margin-bottom: 130px;
+    height: 476px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 945px;
+    margin-bottom: 130px;
+  }
+  &__info-col {
+    padding-right: 20px;
+  }
+  &__info-title {
+    margin-bottom: 19px;
+  }
+  &__data {
+    max-width: 445px;
+  }
+  &__data-title {
+    margin-bottom: 60px;
+  }
+  &__data-textarea {
+    width: 100%;
+  }
+  &__data-input {
+    max-width: 350px;
+  }
+  &__data-button {
+    max-width: 190px;
+    border-radius: 0px;
+    margin-bottom: 60px;
+  }
+}
+// end contacts-page
 .footer {
   background-color: $bg-orange;
   padding: 100px 0;

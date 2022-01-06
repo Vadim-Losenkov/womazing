@@ -4,6 +4,15 @@
   }
 }
 @media (max-width: 1100px) {
+  .top__images-image.image-1 img,
+  .top__images-image.image-1 {
+    min-height: 375px;
+    min-width: 280px;
+  }
+  .top__images-image.image-3,
+  .top__images-image.image-2 {
+    width: 120px;
+  }
   .team__slider {
     max-width: 550px;
   }
@@ -33,13 +42,13 @@
       margin-bottom: 60px;
     }
     &__item-title {
-      text-align: center;
+      text-align: left;
     }
     &__item-box {
       max-width: 100%;
     }
     &__item-text {
-      text-align: center;
+      text-align: left;
     }
     &__item-button {
       margin: 0 auto;
@@ -127,7 +136,7 @@
 }
 @media (max-width: 800px) {
   .top__slider-pagination {
-    padding-top: 20px !important;
+    padding-top: 50px !important;
   }
   .benefits__items {
     justify-content: center;
@@ -234,6 +243,11 @@
   }
 }
 @media (max-width: 600px) {
+  .top__images-image.image-1 img,
+  .top__images-image.image-1 {
+    min-height: auto;
+    min-width: auto;
+  }
   .checkout__inner {
     flex-direction: column;
     align-items: center;
@@ -262,6 +276,23 @@
   }
 }
 @media (max-width: 500px) {
+  /* ШРИФТЫ СО ВСЕЙ СРАНИЦЫ */
+  body,
+  .benefits__item-text,
+  .shop__filter-item,
+  .shop__box-paginatonActive,
+  .shop__box-paginatonLink,
+  .product__info-sizeItem,
+  .default-button-green,
+  .default-button-white,
+  .breadcrumbs__item,
+  .default-link,
+  .default-input::placeholder
+  .default-input {
+    font-size: 14px !important;
+  }
+  /* ШРИФТЫ СО ВСЕЙ СРАНИЦЫ */
+
   .header-mobile {
     max-width: 300px;
   }
@@ -334,5 +365,17 @@
       font-size: 14px;
       padding: 15px 35px;
     }
+  }
+}
+
+@media (max-width: 420px) {
+  .top__images-image.image-3,
+  .top__images-image.image-2 {
+    width: 90px;
+  }
+  .top__images {
+    padding-right: 30px;
+    padding-left: 40px;
+    padding-bottom: 20px;
   }
 }

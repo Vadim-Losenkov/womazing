@@ -164,6 +164,10 @@
     display: block;
     width: 100%;
     text-align: center;
+
+    &.active {
+      color: $green;
+    }
   }
   .header__contact {
     display: flex;
@@ -607,6 +611,7 @@
   }
 }
 .product-more {
+  margin-bottom: 130px;
   &__title {
     margin-bottom: 70px;
   }
@@ -829,16 +834,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     
     &:last-child {
       margin-bottom: 0;
     }
   }
+  &__item-mobile {
+    display: none;
+  }
   &__item-close,
   &__item-close img {
     width: 12px;
     height: 12px;
+    cursor: pointer;
   }
   &__item-infoImage {
     margin-left: 45px;
@@ -927,6 +936,16 @@
   }
 }
 // end cart-page
+
+.map {
+  margin-bottom: 100px;
+  a {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+  }
+}
 
 .footer {
   background-color: $bg-orange;

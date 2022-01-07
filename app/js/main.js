@@ -86,6 +86,18 @@ $(function() {
     $('[data-filter="color"] li').removeClass('active')
     $(this).addClass('active')
   })
+  $('[data-contacts="submit"]').on('click', (e) => {
+    e.preventDefault()
+    $('[data-contacts="success"]').slideToggle(300)
+  })
+  
+  $('[data-product="remove"]').on('click', function() {
+    $(this).closest('[data-product="item"]').remove()
+    
+    if (!$('[data-product="item"]').length) {
+      $('[data-product="wrapper"]').html('<h4 class="title-4">В корзине ничего нет</h4>')
+    }
+  })
   
   // utils
   function checkScroll() {

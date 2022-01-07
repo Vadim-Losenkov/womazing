@@ -1,11 +1,15 @@
+// главные стили
+
 .container {
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-a {
+a,
+strong {
   display: inline-block;
+  font-weight: 500;
   color: #000;
 }
 

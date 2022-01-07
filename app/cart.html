@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- device-width, initial-scale=1.0 -->
+  <meta name="viewport" content="width=600px"> <!-- device-width, initial-scale=1.0 -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>womazing</title>
   <link rel="stylesheet" href="css/style.min.css" type="text/css" media="all" />
@@ -102,103 +102,138 @@
         <div class="container">
           <div class="page-head__inner">
             <h1 class="page-head__title title-1">
-              Свитшот Sweet Shot
+              Корзина
             </h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs__item">
                 <a href="#" class="breadcrumbs__item-link">Главная</a>
               </li>
               <li class="breadcrumbs__item">
-                <a href="#" class="breadcrumbs__item-link">Свитшоты</a>
-              </li>
-              <li class="breadcrumbs__item">
-                Свитшот Sweet Shot
+                Корзина
               </li>
             </ul>
           </div>
         </div>
       </div>
-
-      <section class="product">
+      <div class="cart">
         <div class="container">
-          <div class="product__inner">
-            <div class="product__image">
-              <img src="images/content/product-image-1.jpg" alt="">
+          <div class="cart__inner">
+            <div class="cart__head">
+              <h4 class="cart__head-product title-4">
+                Товар
+              </h4>
+              <h4 class="cart__head-price title-4">
+                Цена
+              </h4>
+              <h4 class="cart__head-count title-4">
+                Количество
+              </h4>
+              <h4 class="cart__head-total title-4">
+                Всего
+              </h4>
             </div>
-            <div class="product__info">
-              <div class="product__info-price">
-                <span class="product__info-priceItem">$311</span>
-                <span class="product__info-priceOld">$450</span>
+            <div class="cart__items" data-product="wrapper">
+              <div class="cart__item" data-product="item">
+                <div class="cart__item-product">
+                  <div class="cart__item-close" data-product="remove">
+                    <img src="images/icons/close.svg" alt="">
+                  </div>
+                  <div class="cart__item-info">
+                    <div class="cart__item-infoImage">
+                      <img src="images/content/cart-image-1.jpg" alt="">
+                    </div>
+                    <p class="cart__item-infoText">
+                      Футболка USA
+                    </p>
+                  </div>
+                </div>
+                <div class="cart__item-price">
+                  $129
+                </div>
+                <div class="cart__item-count">
+                  <input type="number" class="product__info-buttonCounter" value="1">
+                </div>
+                <div class="cart__item-total">
+                  $129
+                </div>
               </div>
-              <div class="product__info-size">
-                <b class="product__info-sizeTitle">
-                  Выберите размер
-                </b>
-                <ul class="product__info-sizeFilter" data-filter="size">
-                  <li class="product__info-sizeItem">s</li>
-                  <li class="product__info-sizeItem active">m</li>
-                  <li class="product__info-sizeItem">l</li>
-                  <li class="product__info-sizeItem">xl</li>
-                  <li class="product__info-sizeItem">xxl</li>
-                </ul>
+              <div class="cart__item" data-product="item">
+                <div class="cart__item-product">
+                  <div class="cart__item-close" data-product="remove">
+                    <img src="images/icons/close.svg" alt="">
+                  </div>
+                  <div class="cart__item-info">
+                    <div class="cart__item-infoImage">
+                      <img src="images/content/cart-image-1.jpg" alt="">
+                    </div>
+                    <p class="cart__item-infoText">
+                      Футболка USA
+                    </p>
+                  </div>
+                </div>
+                <div class="cart__item-price">
+                  $129
+                </div>
+                <div class="cart__item-count">
+                  <input type="number" class="product__info-buttonCounter" value="4">
+                </div>
+                <div class="cart__item-total">
+                  $129
+                </div>
               </div>
-              <div class="product__info-color">
-                <b class="product__info-colorTitle">
-                  Выберите цвет
-                </b>
-                <ul class="product__info-colorFilter" data-filter="color">
-                  <li class="product__info-colorItem" style="background-color: #927876;"></li>
-                  <li class="product__info-colorItem active" style="background-color: #D4D4D4;"></li>
-                  <li class="product__info-colorItem" style="background-color: #FD9696;"></li>
-                  <li class="product__info-colorItem" style="background-color: #FDC796;"></li>
-                </ul>
+              <div class="cart__item" data-product="item">
+                <div class="cart__item-product">
+                  <div class="cart__item-close" data-product="remove">
+                    <img src="images/icons/close.svg" alt="">
+                  </div>
+                  <div class="cart__item-info">
+                    <div class="cart__item-infoImage">
+                      <img src="images/content/cart-image-1.jpg" alt="">
+                    </div>
+                    <p class="cart__item-infoText">
+                      Футболка USA
+                    </p>
+                  </div>
+                </div>
+                <div class="cart__item-price">
+                  $129
+                </div>
+                <div class="cart__item-count">
+                  <input type="number" class="product__info-buttonCounter" value="2">
+                </div>
+                <div class="cart__item-total">
+                  $129
+                </div>
               </div>
-              <div class="product__info-button">
-                <input type="number" class="product__info-buttonCounter" value="1">
-                <a href="#" class="product__info-buttonLink default-button-green">
-                  Добавить в корзину
+            </div>
+            <div class="cart__footer">
+              <div class="cart__footer-sale">
+                <input type="text" placeholder="Введите купон" class="cart__footer-input default-input">
+                <a href="#" class="cart__footer-link default-button-white">
+                  Применить купон
+                </a>
+              </div>
+              <a href="#" class="cart__footer-refresh default-button-white">
+                Обновить корзину
+              </a>
+            </div>
+            <div class="cart__total">
+              <div class="cart__total-top">
+                Подытог: <span>$129</span>
+              </div>
+              <div class="cart__total-footer">
+                <div class="cart__total-main">
+                  <h3 class="cart__total-mainTotal title-3">Итого:</h3>
+                  <h3 class="cart__total-mainPrice title-3">$129</h3>
+                </div>
+                <a href="#" class="cart__total-buy default-button-green">
+                  Оформить заказ
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="product-more">
-        <div class="container">
-          <div class="product-more__inner">
-            <h2 class="product-more__title title-2">
-              Связанные товары
-            </h2>
-            <div class="product-more__items">
-              <a href="item.html" class="shop__item mix category-a">
-                <div class="shop__item-image">
-                  <div class="shop__item-imageOver"></div>
-                  <img src="images/content/shop-item-1.jpg" alt="">
-                </div>
-                <h4 class="shop__item-title title-4">
-                  Футболка USA
-                </h4>
-                <div class="shop__item-price">
-                  <span class="shop__item-priceItem shop__item-priceItem--old">$229</span>
-                  <span class="shop__item-priceItem">$129</span>
-                </div>
-              </a>
-              <a href="item.html" class="shop__item mix category-b category-d">
-                <div class="shop__item-image">
-                  <div class="shop__item-imageOver"></div>
-                  <img src="images/content/shop-item-2.jpg" alt="">
-                </div>
-                <h4 class="shop__item-title title-4">
-                  Футболка USA
-                </h4>
-                <div class="shop__item-price">
-                  <span class="shop__item-priceItem">$129</span>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
 
     <footer class="footer">

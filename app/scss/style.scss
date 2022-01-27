@@ -4,7 +4,8 @@
 @import "libs";
 @import "global";
 
-// стили
+/* стили */
+
 .header {
   background-color: rgba(#fff, 0);
   box-shadow: 0 4px 15px rgba(#000, 0);
@@ -179,7 +180,7 @@
     margin-bottom: 30px;
   }
 }
-// home-page
+/* home-page */
 .top {
   padding-top: $header-indent;
   margin-bottom: 185px;
@@ -388,9 +389,9 @@
     background-color: #fff;
   }
 }
-// end home-page
+/* end home-page */
 
-// shop-page
+/* shop-page */
 .shop {
   &__filter {
     display: flex;
@@ -512,9 +513,9 @@
     color: #000;
   }
 }
-// end shop-page
+/* end shop-page */
 
-// item-page
+/* item-page */
 .product {
   margin-bottom: 130px;
   
@@ -621,9 +622,9 @@
     column-gap: 30px;
   }
 }
-// end item-page
+/* end item-page */
 
-// about-page
+/* about-page */
 .about {
   margin-bottom: 130px;
   &__item {
@@ -659,9 +660,9 @@
     width: 260px;
   }
 }
-// end about-page
+/* end about-page */
 
-// checkout-page
+/* checkout-page */
 .checkout {
   &__inner {
     display: flex;
@@ -670,6 +671,15 @@
   &__data {
     max-width: 370px;
     padding-right: 40px;
+  }
+  &__data-input {
+    margin-bottom: 0;
+  }
+  &__data-itemWrapper {
+    margin-bottom: 30px;
+    label.invalid-field {
+      color: red;
+    }
   }
   &__data-title {
     margin-bottom: 45px;
@@ -742,9 +752,9 @@
     }
   }
 }
-// end checkout-page
+/* end checkout-page */
 
-// success-page
+/* success-page */
 .success {
   margin-bottom: 140px;
   &__inner {
@@ -765,9 +775,9 @@
     margin-bottom: 17px;
   }
 }
-// end success-page
+/* end success-page */
 
-// contacts-page
+/* contacts-page */
 .contacts {
   &__map {
     margin-bottom: 130px;
@@ -796,9 +806,19 @@
   }
   &__data-input {
     max-width: 350px;
+    margin-bottom: 0;
+  }
+  &__data-form {
+    label.invalid-field {
+      color: red;
+    }
+  }
+  &__data-formInput {
+    margin-bottom: 30px;
   }
   &__data-textarea {
     height: 130px;
+    margin-bottom: 0;
   }
   &__data-button {
     max-width: 190px;
@@ -814,9 +834,9 @@
     text-align: center;
   }
 }
-// end contacts-page
+/* end contacts-page */
 
-// cart-page
+/* cart-page */
 .cart {
   margin-bottom: 130px;
   &__head {
@@ -894,10 +914,15 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 90px;
+    
+    label.invalid-field {
+      color: red;
+    }
   }
   &__footer-sale {
     display: flex;
     align-items: flex-end;
+    column-gap: 15px;
   }
   &__footer-input {
     margin-bottom: 0;
@@ -935,8 +960,9 @@
     padding-bottom: 0;
   }
 }
-// end cart-page
+/* end cart-page */
 
+/* map-page */
 .map {
   margin-bottom: 100px;
   a {
@@ -946,6 +972,7 @@
     text-decoration: underline;
   }
 }
+/* end map-page */
 
 .footer {
   background-color: $bg-orange;
@@ -1022,4 +1049,5 @@
   }
 }
 
+/* adaptive */
 @import "media";

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- device-width, initial-scale=1.0 -->
+  <meta name="viewport" content="width=1600px"> <!-- device-width, initial-scale=1.0 -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>womazing</title>
   <link rel="stylesheet" href="css/style.min.css" type="text/css" media="all" />
@@ -13,8 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
   <!-- шрифты -->
-
-  
 
 </head>
 
@@ -231,12 +229,17 @@
               </div>
             </div>
             <div class="cart__footer">
-              <div class="cart__footer-sale">
-                <input type="text" placeholder="Введите купон" class="cart__footer-input default-input">
-                <a href="#" class="cart__footer-link default-button-white">
+              <form data-cart="form" class="cart__footer-sale">
+                <div class="cart__footer-itemWrapper">
+                  <div class="cart__footer-saleItem field">
+                    <input class="cart__footer-input default-input" placeholder="Введите купон" id="promo" name="promo" type="text" value="" maxlength="7" >
+                  </div>
+                  <div class="cart__footer-saleStatus status"></div>
+                </div>
+                <button type="submit" class="cart__footer-link default-button-white">
                   Применить купон
-                </a>
-              </div>
+                </button>
+              </form>
               <a href="#" class="cart__footer-refresh default-button-white">
                 Обновить корзину
               </a>
@@ -357,12 +360,30 @@
   <div class="popups">
     <div id="header-phone-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Заказать обратный звонок</h3>
-      <input class="call-popup__input" type="text" placeholder="Имя" />
-      <input class="call-popup__input" type="email" placeholder="E-mail" />
-      <input class="call-popup__input" type="number" placeholder="Телефон" />
-      <a href="#response-popup" class="call-popup__button default-button-green open-popup">
-        Заказать звонок
-      </a>
+      <form action="" autocomplete="off" data-popup="form">
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Имя" id="username" name="username" type="text" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="E-mail" id="email" name="email" type="email" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Телефон" id="phone" name="phone" type="tel" value="" maxlength="17" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <button type="submit" data-popup="reqest" class="call-popup__button default-button-green">
+          Заказать звонок
+        </button>
+        <a href="#response-popup" class="success-popup"></a>
+      </form>
     </div>
     <div id="response-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Отлично! Мы скоро вам перезвоним.</h3>
@@ -375,6 +396,7 @@
   <div class="overlay"></div>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>

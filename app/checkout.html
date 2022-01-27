@@ -14,8 +14,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
   <!-- шрифты -->
 
-  
-
 </head>
 
 <body>
@@ -114,25 +112,65 @@
       </div>
       <div class="checkout">
         <div class="container">
-          <div class="checkout__inner">
+          <form data-checkout="form" autocomplete="off" class="checkout__inner">
             <div class="checkout__data">
               <div class="checkout__data-item">
                 <h3 class="checkout__data-title title-3">
                   Данные покупателя
                 </h3>
-                <input type="text" class="checkout__data-input default-input" placeholder="Имя">
-                <input type="email" class="checkout__data-input default-input" placeholder="E-mail">
-                <input type="number" class="checkout__data-input default-input" placeholder="Телефон">
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="Имя" id="username" name="username" type="text" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="E-mail" id="email" name="email" type="email" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="Телефон" id="phone" name="phone" type="tel" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
               </div>
               <div class="checkout__data-item">
                 <h3 class="checkout__data-title title-3">
                   Адресс получателя
                 </h3>
-                <input type="text" class="checkout__data-input default-input" placeholder="Страна">
-                <input type="text" class="checkout__data-input default-input" placeholder="Город">
-                <input type="text" class="checkout__data-input default-input" placeholder="Улица">
-                <input type="text" class="checkout__data-input default-input" placeholder="Дом">
-                <input type="text" class="checkout__data-input default-input" placeholder="Квартира">
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="Страна" id="country" name="country" type="text" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="Город" id="city" name="city" type="text" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="Улица" id="street" name="street" type="text" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="Дом" id="house" name="house" type="text" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
+                <div class="checkout__data-itemWrapper">
+                  <div class="checkout__data-itemItem field">
+                    <input class="checkout__data-input default-input" placeholder="Квартира" id="float" name="float" type="text" value="" maxlength="50" >
+                  </div>
+                  <div class="checkout__data-inputStatus status"></div>
+                </div>
               </div>
               <div class="checkout__data-item">
                 <h3 class="checkout__data-title title-3">
@@ -171,12 +209,12 @@
                   <div class="custom-checkbox"></div>
                   Оплата наличными
                 </div>
-                <a href="success.html" class="checkout__info-payLink default-button-green">
+                <button type="submit" class="checkout__info-payLink default-button-green">
                   Разместить заказ
-                </a>
+                </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </main>
@@ -278,12 +316,30 @@
   <div class="popups">
     <div id="header-phone-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Заказать обратный звонок</h3>
-      <input class="call-popup__input" type="text" placeholder="Имя" />
-      <input class="call-popup__input" type="email" placeholder="E-mail" />
-      <input class="call-popup__input" type="number" placeholder="Телефон" />
-      <a href="#response-popup" class="call-popup__button default-button-green open-popup">
-        Заказать звонок
-      </a>
+      <form action="" autocomplete="off" data-popup="form">
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Имя" id="username" name="username" type="text" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="E-mail" id="email" name="email" type="email" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Телефон" id="phone" name="phone" type="tel" value="" maxlength="17" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <button type="submit" data-popup="reqest" class="call-popup__button default-button-green">
+          Заказать звонок
+        </button>
+        <a href="#response-popup" class="success-popup"></a>
+      </form>
     </div>
     <div id="response-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Отлично! Мы скоро вам перезвоним.</h3>
@@ -296,6 +352,7 @@
   <div class="overlay"></div>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>

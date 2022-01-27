@@ -236,12 +236,30 @@
   <div class="popups">
     <div id="header-phone-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Заказать обратный звонок</h3>
-      <input class="call-popup__input" type="text" placeholder="Имя" />
-      <input class="call-popup__input" type="email" placeholder="E-mail" />
-      <input class="call-popup__input" type="number" placeholder="Телефон" />
-      <a href="#response-popup" class="call-popup__button default-button-green open-popup">
-        Заказать звонок
-      </a>
+      <form action="" autocomplete="off" data-popup="form">
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Имя" id="username" name="username" type="text" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="E-mail" id="email" name="email" type="email" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Телефон" id="phone" name="phone" type="tel" value="" maxlength="17" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <button type="submit" data-popup="reqest" class="call-popup__button default-button-green">
+          Заказать звонок
+        </button>
+        <a href="#response-popup" class="success-popup"></a>
+      </form>
     </div>
     <div id="response-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Отлично! Мы скоро вам перезвоним.</h3>
@@ -254,6 +272,7 @@
   <div class="overlay"></div>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>

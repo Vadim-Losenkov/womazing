@@ -66,13 +66,32 @@
     display: none;
   }
 }
+[data-popup="form"] {
+  max-width: 100%;
+  width: 100%;
+  
+  label.invalid-field {
+    color: red;
+  }
+  .call-popup__button {
+    border-radius: 0;
+  }
+  
+  .success-popup {
+    display: none;
+  }
+}
+.call-popup__formInput, {
+  margin-bottom: 35px;
+  max-width: 100%;
+  width: 100%;
+}
 
 .call-popup__title {
   margin-bottom: 35px;
   text-align: center;
 }
-.call-popup__input {
-  margin-bottom: 35px;
+input.call-popup__input {
   padding-bottom: 16px;
   width: 100%;
   max-width: 100%;

@@ -114,16 +114,16 @@
       </div>
       <div class="map">
         <div class="container">
-          <a href="index.html">Главная</a>
-          <a href="about.html">О бренде</a>
-          <a href="cart.html">Корзина</a>
-          <a href="checkout.html">Оформление заказа</a>
-          <a href="contacts.html">Контакты</a>
-          <a href="item.html">Продукт</a>
-          <a href="map.html">Карта сайта</a>
-          <a href="shop.html">Магазин</a>
-          <a href="success.html">успешное оформление заказа</a>
-          <a href="template.html">Пустая страница</a>
+          <a href="index.html" target="_blank">Главная</a>
+          <a href="about.html" target="_blank">О бренде</a>
+          <a href="cart.html" target="_blank">Корзина</a>
+          <a href="checkout.html" target="_blank">Оформление заказа</a>
+          <a href="contacts.html" target="_blank">Контакты</a>
+          <a href="item.html" target="_blank">Продукт</a>
+          <a href="map.html" target="_blank">Карта сайта</a>
+          <a href="shop.html" target="_blank">Магазин</a>
+          <a href="success.html" target="_blank">успешное оформление заказа</a>
+          <a href="template.html" target="_blank">Пустая страница</a>
         </div>
       </div>
     </main>
@@ -225,12 +225,30 @@
   <div class="popups">
     <div id="header-phone-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Заказать обратный звонок</h3>
-      <input class="call-popup__input" type="text" placeholder="Имя" />
-      <input class="call-popup__input" type="email" placeholder="E-mail" />
-      <input class="call-popup__input" type="number" placeholder="Телефон" />
-      <a href="#response-popup" class="call-popup__button default-button-green open-popup">
-        Заказать звонок
-      </a>
+      <form action="" autocomplete="off" data-popup="form">
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Имя" id="username" name="username" type="text" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="E-mail" id="email" name="email" type="email" value="" maxlength="50" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <div class="call-popup__formInput">
+          <div class="call-popup__formItem field">
+            <input class="call-popup__input" placeholder="Телефон" id="phone" name="phone" type="tel" value="" maxlength="17" />
+          </div>
+          <div class="call-popup__input status"></div>
+        </div>
+        <button type="submit" data-popup="reqest" class="call-popup__button default-button-green">
+          Заказать звонок
+        </button>
+        <a href="#response-popup" class="success-popup"></a>
+      </form>
     </div>
     <div id="response-popup" class="call-popup mfp-with-anim mfp-hide">
       <h3 class="call-popup__title title-3">Отлично! Мы скоро вам перезвоним.</h3>
@@ -243,6 +261,7 @@
   <div class="overlay"></div>
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>

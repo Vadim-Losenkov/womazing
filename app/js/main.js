@@ -24,9 +24,19 @@ $(function() {
       },
       midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
+    $('.success-popup').magnificPopup({
+      type: 'inline',
+      removalDelay: 500, //delay removal by X to allow out-animation
+      callbacks: {
+        beforeOpen: function () {
+          this.st.mainClass = this.st.el.attr('data-effect');
+        }
+      },
+      midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    });
     $('[data-popup="close"]').on('click', (e) => {
-      e.preventDefault()
       $('.open-popup').magnificPopup('close')
+      e.preventDefault()
     })
   } ())
 
@@ -86,10 +96,6 @@ $(function() {
     $('[data-filter="color"] li').removeClass('active')
     $(this).addClass('active')
   })
-  $('[data-contacts="submit"]').on('click', (e) => {
-    e.preventDefault()
-    $('[data-contacts="success"]').slideToggle(300)
-  })
   
   $('[data-product="remove"]').on('click', function() {
     $(this).closest('[data-product="item"]').remove()
@@ -99,6 +105,244 @@ $(function() {
     }
   })
   
+  // Валидация формы модалки
+  $('[data-popup="form"]').validate({
+    errorClass: 'invalid-field',
+		rules: {
+			username: {
+				required: true,
+				minlength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true,
+				minlength: 11,
+			},
+		},
+		messages: {
+			username: {
+				required: "Введите имя",
+				minlength: jQuery.validator.format("Имя должно состоять минимум из {0} символов")
+			},
+			phone: {
+				required: "Введите Телефон",
+				minlength: jQuery.validator.format("Телефон должен состоять минимум из {0} символов")
+			},
+			email: {
+				required: "Введите E-mail",
+				minlength: jQuery.validator.format("E-mail должен состоять минимум из {0} символов")
+			},
+		},
+		// the errorPlacement has to take the table layout into account
+		errorPlacement: function(error, element) {
+			if (element.is(":radio"))
+				error.appendTo(element.parent().next().next());
+			else if (element.is(":checkbox"))
+				error.appendTo(element.next());
+			else
+				error.appendTo(element.parent().next());
+		},
+		// specifying a submitHandler prevents the default submit, good for the demo
+		submitHandler: function(e) {
+			$('.success-popup').magnificPopup('open')
+		},
+		// set this class to error-labels to indicate valid fields
+		success: function(label) {
+			// set &nbsp; as text for IE
+			label.html("&nbsp;").addClass("checked")
+		}
+	});
+	
+  // Валидация формы контактов
+  $('[data-contacts="form"]').validate({
+    errorClass: 'invalid-field',
+		rules: {
+			username: {
+				required: true,
+				minlength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true,
+				minlength: 11,
+			},
+			msg: {
+				required: true
+			},
+		},
+		messages: {
+			username: {
+				required: "Введите имя",
+				minlength: jQuery.validator.format("Имя должно состоять минимум из {0} символов")
+			},
+			phone: {
+				required: "Введите Телефон",
+				minlength: jQuery.validator.format("Телефон должен состоять минимум из {0} символов")
+			},
+			email: {
+				required: "Введите E-mail",
+				minlength: jQuery.validator.format("E-mail должен состоять минимум из {0} символов")
+			},
+			msg: {
+				required: "Введите Сообщение",
+			},
+		},
+		// the errorPlacement has to take the table layout into account
+		errorPlacement: function(error, element) {
+			if (element.is(":radio"))
+				error.appendTo(element.parent().next().next());
+			else if (element.is(":checkbox"))
+				error.appendTo(element.next());
+			else
+				error.appendTo(element.parent().next());
+		},
+		// specifying a submitHandler prevents the default submit, good for the demo
+		submitHandler: function() {
+		  $('[data-contacts="success"]').slideToggle(300)
+		  
+		  setTimeout(() => {
+		    $('[data-contacts="success"]').slideToggle(300)
+		  }, 2100);
+		},
+		// set this class to error-labels to indicate valid fields
+		success: function(label) {
+			// set &nbsp; as text for IE
+			label.html("&nbsp;").addClass("checked")
+		}
+	});
+	
+  // Валидация формы заказа
+  $('[data-checkout="form"]').validate({
+    errorClass: 'invalid-field',
+		rules: {
+			username: {
+				required: true,
+				minlength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: true,
+				minlength: 11,
+			},
+			country: {
+				required: true,
+				minlength: 2,
+			},
+			city: {
+				required: true,
+				minlength: 2,
+			},
+			street: {
+				required: true,
+				minlength: 2,
+			},
+			house: {
+				required: true,
+				minlength: 1,
+			},
+			float: {
+				required: true,
+				minlength: 1,
+			},
+		},
+		messages: {
+			username: {
+				required: "Введите имя",
+				minlength: jQuery.validator.format("Имя должно состоять минимум из {0} символов")
+			},
+			phone: {
+				required: "Введите Телефон",
+				minlength: jQuery.validator.format("Телефон должен состоять минимум из {0} символов")
+			},
+			email: {
+				required: "Введите E-mail",
+				minlength: jQuery.validator.format("E-mail должен состоять минимум из {0} символов")
+			},
+			country: {
+				required: "Введите Страну",
+				minlength: jQuery.validator.format("минимум {0} символов")
+			},
+			city: {
+				required: "Введите Город",
+				minlength: jQuery.validator.format("минимум {0} символов")
+			},
+			street: {
+				required: "Введите Улицу",
+				minlength: jQuery.validator.format("минимум {0} символов")
+			},
+			house: {
+				required: "Введите Дом",
+				minlength: jQuery.validator.format("минимум {0} символов")
+			},
+			float: {
+				required: "Введите Квартиру",
+				minlength: jQuery.validator.format("минимум {0} символов")
+			},
+		},
+		// the errorPlacement has to take the table layout into account
+		errorPlacement: function(error, element) {
+			if (element.is(":radio"))
+				error.appendTo(element.parent().next().next());
+			else if (element.is(":checkbox"))
+				error.appendTo(element.next());
+			else
+				error.appendTo(element.parent().next());
+		},
+		// specifying a submitHandler prevents the default submit, good for the demo
+		submitHandler: function(e) {
+		  document.location.href = 'success.html'
+		},
+		// set this class to error-labels to indicate valid fields
+		success: function(label) {
+			// set &nbsp; as text for IE
+			label.html("&nbsp;").addClass("checked")
+		}
+	});
+	
+  // Валидация формы корзины
+  $('[data-cart="form"]').validate({
+    errorClass: 'invalid-field',
+		rules: {
+			promo: {
+				required: true,
+				minlength: 5
+			},
+		},
+		messages: {
+			promo: {
+				required: "Введите промокод",
+				minlength: jQuery.validator.format("Промокод должно состоять минимум из {0} символов")
+			},
+		},
+		// the errorPlacement has to take the table layout into account
+		errorPlacement: function(error, element) {
+			if (element.is(":radio"))
+				error.appendTo(element.parent().next().next());
+			else if (element.is(":checkbox"))
+				error.appendTo(element.next());
+			else
+				error.appendTo(element.parent().next());
+		},
+		// specifying a submitHandler prevents the default submit, good for the demo
+		submitHandler: function(e) {
+		  alert('Промокод применен')
+		},
+		// set this class to error-labels to indicate valid fields
+		success: function(label) {
+			// set &nbsp; as text for IE
+			label.html("&nbsp;").addClass("checked")
+		}
+	});
+	
   // utils
   function checkScroll() {
     if (this.pageYOffset > 30) {

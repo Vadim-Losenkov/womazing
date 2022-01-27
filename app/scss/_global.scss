@@ -6,6 +6,12 @@
   margin: 0 auto;
 }
 
+form {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 a,
 strong {
   display: inline-block;
@@ -18,7 +24,7 @@ button {
   background-color: #000;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px;
   padding: 5px 30px;
 }
 html {
